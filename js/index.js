@@ -3,7 +3,7 @@ const loggedInUser = localStorage.getItem('loggedIn');
 document.addEventListener("DOMContentLoaded", () => {
     if (!loggedInUser) {    
         setTimeout(function() {
-            window.location.replace('D:/ProjectFullJSIDN/login.html');
+            window.location.href = 'login.html';
             alert('You must log in first!');
         }, 200);
     } else {
