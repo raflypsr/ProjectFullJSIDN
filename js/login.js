@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loggedInUser = localStorage.getItem('loggedIn');
+    if (loggedInUser) {
+        window.location.href = 'index.html';
+        alert("anda harus logout dulu")
+    }
+});
+
 function fromBase64(base64) {
     const binaryString = atob(base64);
     return new Uint8Array([...binaryString].map(char => char.charCodeAt(0)));
