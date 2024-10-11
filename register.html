@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <a href="D:/ProjectFullJSIDN/login.html">login</a>
+    <a href="login.html">login</a>
     <div class="form-container">
         <h2>Register</h2>
         <form id="registerForm">
-            <input type="text" id="username" placeholder="Username" required><br>
-            <input type="password" id="password" placeholder="Password" required><br>
+            <label for="">username</label>
+            <input type="text" id="username" placeholder="min 3 digit alphanumeric" required pattern="[a-zA-Z0-9]+"
+                minlength="3"><br>
+            <label for="">password</label>
+            <input type="password" id="password" required minlength="8"><br>
             <button type="submit" class="form-button">Register</button>
         </form>
     </div>
