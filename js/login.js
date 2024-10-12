@@ -40,16 +40,16 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
     // perulangan data array of object
     for (const user of users) {
-        // per 1 data diubah ke utf8
+        // per 1 data user diubah ke uint8array
         const userBytes = fromBase64(user);
 
-        // objeck yang memiliki fungsi pengubah utf8 ke string
+        // objek yang memiliki fungsi pengubah uint8array ke string
         const decoder = new TextDecoder();
 
         // Temukan index separator (0), karena itu pemisah username dengan password
         const separatorIndex = userBytes.indexOf(0);
 
-        // fungsi decode() untuk utf8 di ubah ke string
+        // fungsi decode() untuk uint8array di ubah ke string
         // fungsi subarray(index awal, index akhir) mengambil data dari index yang ditentukan
         const storedUsername = decoder.decode(userBytes.subarray(0, separatorIndex));
 
