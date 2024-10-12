@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// fungsi ini mengubah uint8array menjadi huruf lalu baru ke base64
 function toBase64(byteArray) {
+    // String.fromCharCode() digunakan untuk mengonversi nilai-nilai numerik menjadi karakter yang sesuai berdasarkan kode Unicode.
+    // btoa() mengubah string jadi base64
     return btoa(String.fromCharCode(...byteArray));
 }
 
