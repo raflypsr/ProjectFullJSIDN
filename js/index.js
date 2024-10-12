@@ -1,5 +1,10 @@
+// mengambil key loggedIn di local storage 
+// sebelumnya yang terjadi saat proses login ada pengesetan username user yang login, 
+// nanti saat proses login username user yang login akan di set di local storage
+// baca login.js
 const loggedInUser = localStorage.getItem('loggedIn');
 
+// saat event onDOMContentLoaded(tepat setelah dom di load semua) terjadi
 document.addEventListener("DOMContentLoaded", () => {
     if (!loggedInUser) {    
         setTimeout(function() {
