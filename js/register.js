@@ -39,8 +39,8 @@ function storeUser(username, password) {
     // berubah jadi base64
     const base64String = toBase64(combinedBytes);
 
-    // localstorage hanya bisa menyimpan string jadi di parse dulu ke object js, di local storage datanya adalah array of object
-    // ambil user yang sudah ada dulu karena nanti akan digabung dengan user yang baru daftar, kalo ga ada jadi array kosong aja
+    // localstorage hanya bisa menyimpan string jadi di parse dulu ke object js
+    // ambil user yang sudah ada dulu karena nanti akan digabung dengan user yang baru daftar, kalo ga ada pake array kosong 
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     // existingUsers adalah array maka ada method push
